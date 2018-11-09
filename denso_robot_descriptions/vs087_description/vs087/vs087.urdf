@@ -1,9 +1,9 @@
 <robot name="vs087">
-  <gazebo>
+  <!-- <gazebo>
 		<plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
 			<robotNamespace>/vs087</robotNamespace>
 		</plugin>
-	</gazebo>
+	</gazebo> -->
 	<link name="world" />
 	<joint name="joint_w" type="fixed">
 		<parent link="world" />
