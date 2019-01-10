@@ -36,7 +36,7 @@
   <group unless="$(arg sim)">
     <!-- IAI  driver -->
     <!-- <node pkg="iai_gripper_driver" type="listener.py" name="iai_driver" output="screen" /> -->
-    <include file="$(find denso_robot_bringup)/launch/denso_robot_bringup.launch" output="screen" />
+    <include file="$(find iai_gripper_driver)/launch/listener.launch" />
     <!-- <node pkg="iai_gripper_control"  type="mhand_joint_state_republisher"  name="mhand_joint_state_republisher" output="screen"> -->
     <!--   <param name="joint_state_republish_topic_name" value="/vs087_and_mhand/joint_states" /> -->
     <!--   <param name="joint_state_subscribe_topic_name" value="/vs087/joint_states" /> -->
