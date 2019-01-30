@@ -1,0 +1,13 @@
+<launch>
+
+  <node name="from_world_to_photoneo_test_static_tf" pkg="tf" type="static_transform_publisher" args="1.6282 0.532 1.6235 -2.9004 1.01 0.18 world photoneo_test 50" />
+  <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_frame" output="screen"/>
+
+  <!-- publish plannning scene -->
+  <arg name="scene_file" default="$(find kddi_ros_pkg)/scene/KDDI_conveyor_simple_with_wall.scene"/>
+  <node pkg= "moveit_ros_planning" name = "moveit_publish_scene_from_text" output="screen"
+  	type = "moveit_publish_scene_from_text" args="$(arg scene_file)"/>
+
+  <node pkg="kddi_ros_pkg" type="command_republisher.py" name="command_republisher" output="screen"/>
+
+</launch>

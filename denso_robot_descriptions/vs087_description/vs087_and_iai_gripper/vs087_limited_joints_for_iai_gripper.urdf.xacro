@@ -88,7 +88,7 @@
 	<joint name="joint_2" type="revolute">
 		<parent link="J1" />
 		<child link="J2" />
-
+		
 		<origin rpy="0.000000 0.000000 0.000000" xyz="0.030000 0.000000 0.197500" />
 		<axis xyz="-0.000000 1.000000 -0.000000" />
 
@@ -127,12 +127,11 @@
 	<joint name="joint_3" type="revolute">
 		<parent link="J2" />
 		<child link="J3" />
-
+		
 		<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.445000" />
 		<axis xyz="-0.000000 1.000000 -0.000000" />
 
-		<!-- <limit effort="1" lower="-1.1836822987" upper="2.54469004941" velocity="3.45575191894877" /> -->
-		<limit effort="1" lower="-1.1836822987" upper="2.56" velocity="3.45575191894877" />
+		<limit effort="1" lower="-1.1836822987" upper="2.54469004941" velocity="3.45575191894877" />
 		<dynamics damping="0" friction="0" />
 	</joint>
 	<transmission name="trans_3">
@@ -246,8 +245,7 @@
 		<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.080000" />
 		<axis xyz="-0.000000 -0.000000 1.000000" />
 
-		<!-- <limit effort="1" lower="2.13750473492" upper="6.283185" velocity="6.91150383789755" /> -->
-		<limit effort="1" lower="0.0" upper="6.283185" velocity="6.91150383789755" />
+		<limit effort="1" lower="2.13750473492" upper="6.283185" velocity="6.91150383789755" />
 		<dynamics damping="0" friction="0" />
 	</joint>
 	<transmission name="trans_6">
