@@ -3,7 +3,7 @@ stomp/manipulator:
   optimization:
     num_timesteps: 100
     num_iterations: 50
-    num_iterations_after_valid: 0    
+    num_iterations_after_valid: 0
     num_rollouts: 10
     max_rollouts: 100
     initialization_method: 1 #[1 : LINEAR_INTERPOLATION, 2 : CUBIC_POLYNOMIAL, 3 : MININUM_CONTROL_COST
@@ -17,11 +17,11 @@ stomp/manipulator:
         collision_penalty: 1.0
         cost_weight: 1.0
         kernel_window_percentage: 0.2
-        longest_valid_joint_move: 0.05 
+        longest_valid_joint_move: 0.05
 #      - class: stomp_moveit/ObstacleDistanceGradient
 #        max_distance: 0.2
 #        cost_weight: 1.0
-#        longest_valid_joint_move: 0.05 
+#        longest_valid_joint_move: 0.05
     noisy_filters:
       - class: stomp_moveit/JointLimits
         lock_start: True
@@ -47,7 +47,7 @@ stomp/gripper:
   optimization:
     num_timesteps: 100
     num_iterations: 50
-    num_iterations_after_valid: 0    
+    num_iterations_after_valid: 0
     num_rollouts: 10
     max_rollouts: 100
     initialization_method: 1 #[1 : LINEAR_INTERPOLATION, 2 : CUBIC_POLYNOMIAL, 3 : MININUM_CONTROL_COST
@@ -61,11 +61,11 @@ stomp/gripper:
         collision_penalty: 1.0
         cost_weight: 1.0
         kernel_window_percentage: 0.2
-        longest_valid_joint_move: 0.05 
+        longest_valid_joint_move: 0.05
 #      - class: stomp_moveit/ObstacleDistanceGradient
 #        max_distance: 0.2
 #        cost_weight: 1.0
-#        longest_valid_joint_move: 0.05 
+#        longest_valid_joint_move: 0.05
     noisy_filters:
       - class: stomp_moveit/JointLimits
         lock_start: True

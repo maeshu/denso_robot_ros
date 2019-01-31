@@ -2,7 +2,7 @@
 
   <!-- The argument for specifying robot type -->
   <arg name="robot_name" default="vs087" />
-  <arg name="robot_options" default="vs087" />
+  <arg name="robot_options" default="vs087_and_mhand2" />
 
   <!-- The robot config argument -->
   <arg name="robot_config" value="$(arg robot_name)_config" />
@@ -14,7 +14,7 @@
   <!-- Flag indicating whether the controller manager should be used or not -->
   <arg name="use_controller_manager" default="true" />
   <param name="use_controller_manager" value="$(arg use_controller_manager)" />
-  
+
   <!-- The rest of the params are specific to this plugin -->
   <rosparam file="$(find vs087_moveit_config)/config/$(arg robot_options)/controllers_sim.yaml"/>
 
