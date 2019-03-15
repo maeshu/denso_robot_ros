@@ -1,7 +1,9 @@
 <launch>
 
   <node name="from_world_to_photoneo_test_static_tf" pkg="tf" type="static_transform_publisher" args="1.6282 0.532 1.6235 -2.9004 1.01 0.18 world photoneo_test 50" />
-  <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_frame" output="screen"/>
+  <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_frame" output="screen">
+    <param name="sensor_name" type="str" value="photoneo_test" />
+  </node>
 
   <!-- publish plannning scene -->
   <arg name="scene_file" default="$(find kddi_ros_pkg)/scene/KDDI_conveyor_simple_with_wall.scene"/>

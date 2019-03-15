@@ -53,7 +53,10 @@
     </include>
   </group>
 
+  <!-- photoneo_sensor: "photoneo_test" -->
   <node name="from_world_to_phoxi_test_static_tf" pkg="tf" type="static_transform_publisher" args="1.1547 0.2047 0.8946 -2.8982 0.9154 0.196 world photoneo_test 50" />
-  <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_frame" output="screen"/>
+  <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_frame" output="screen">
+    <param name="sensor_name" type="str" value="photoneo_test" />
+  </node>
 
 </launch>
