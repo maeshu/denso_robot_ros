@@ -60,7 +60,8 @@
   </node>
 
   <!-- photoneo_sensor: "photoneo_left" -->
-  <node name="from_world_to_photoneo_left_static_tf" pkg="tf" type="static_transform_publisher" args="0.8447 1.0599 0.9848 -2.162 0.1785 0.0832 world photoneo_left 50" />
+  <!-- <node name="from_world_to_photoneo_left_static_tf" pkg="tf" type="static_transform_publisher" args="0.8447 1.0599 0.9848 -2.162 0.1785 0.0832 world photoneo_left 50" /> -->
+  <node name="from_world_to_photoneo_left_static_tf" pkg="tf" type="static_transform_publisher" args="0.9004 1.2682 1.021 -2.0326 0.3749 0.0188 world photoneo_left 50" />
   <node pkg="photoneo_localization" type="sensor_frame_broadcaster.py" name="photoneo_left_frame" output="screen">
     <param name="sensor_name" type="str" value="photoneo_left" />
   </node>
