@@ -5,6 +5,10 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planning Request1
+        - /MotionPlanning1/Planned Path1
+        - /PointCloud22
+        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.742560029
     Tree Height: 421
@@ -105,33 +109,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          kinect_center_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_center_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect_left_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_left_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect_right_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_right_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           mhand_body_link:
             Alpha: 1
             Show Axes: false
@@ -156,7 +133,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -176,7 +153,7 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.100000001
         Joint Violation Color: 255; 0; 255
         Planning Group: arm
         Query Goal State: true
@@ -237,33 +214,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           hand_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect_center_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_center_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect_left_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_left_rgb_optical_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          kinect_right_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          kinect_right_rgb_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -335,9 +285,9 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: RGB8
+      Color Transformer: Intensity
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4096
@@ -348,18 +298,22 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.00999999978
+      Size (m): 0.000500000024
       Style: Flat Squares
-      Topic: /kinect_center/qhd/points
+      Topic: /photoneo_center/pointcloud
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        HV8_0:
+          Value: true
+        HV8_0_point_1:
+          Value: true
         J1:
           Value: false
         J2:
@@ -372,53 +326,31 @@ Visualization Manager:
           Value: false
         J6:
           Value: false
-        ar_marker_0:
-          Value: true
-        ar_marker_1:
-          Value: true
-        ar_marker_10:
-          Value: true
-        ar_marker_11:
-          Value: true
-        assembling_target_part:
-          Value: true
-        assembling_target_part_goal_point_0:
-          Value: true
-        assembling_target_part_goal_point_1:
-          Value: true
-        assembling_target_part_wrist_point_0:
-          Value: true
-        assembling_target_part_wrist_point_1:
-          Value: true
         base_link:
           Value: false
         hand_link:
           Value: false
-        kinect_center_link:
+        jig_HV6_0:
           Value: true
-        kinect_center_rgb_optical_frame:
+        jig_HV6_0_HV8_0:
           Value: true
-        kinect_left_link:
+        jig_HV6_0_HV8_0_assemble_point:
           Value: true
-        kinect_left_rgb_optical_frame:
+        jig_HV6_0_HV8_1:
           Value: true
-        kinect_right_link:
-          Value: true
-        kinect_right_rgb_optical_frame:
+        jig_HV6_0_HV8_1_assemble_point:
           Value: true
         mhand_body_link:
           Value: false
-        part_0:
+        photoneo_center:
           Value: true
-        part_0_wrist_point_0:
-          Value: true
-        parts_pallete:
+        photoneo_center_optical_frame:
           Value: true
         world:
           Value: true
       Marker Scale: 1
       Name: TF
-      Show Arrows: true
+      Show Arrows: false
       Show Axes: true
       Show Names: true
       Tree:
@@ -433,33 +365,18 @@ Visualization Manager:
                         hand_link:
                           mhand_body_link:
                             {}
-          kinect_center_link:
-            kinect_center_rgb_optical_frame:
-              ar_marker_0:
-                part_0:
-                  part_0_wrist_point_0:
-                    {}
-              ar_marker_1:
-                {}
-              ar_marker_10:
-                parts_pallete:
+          photoneo_center:
+            photoneo_center_optical_frame:
+              HV8_0:
+                HV8_0_point_1:
                   {}
-              ar_marker_11:
-                assembling_target_part:
-                  assembling_target_part_goal_point_0:
+              jig_HV6_0:
+                jig_HV6_0_HV8_0:
+                  jig_HV6_0_HV8_0_assemble_point:
                     {}
-                  assembling_target_part_goal_point_1:
+                jig_HV6_0_HV8_1:
+                  jig_HV6_0_HV8_1_assemble_point:
                     {}
-                  assembling_target_part_wrist_point_0:
-                    {}
-                  assembling_target_part_wrist_point_1:
-                    {}
-          kinect_left_link:
-            kinect_left_rgb_optical_frame:
-              {}
-          kinect_right_link:
-            kinect_right_rgb_optical_frame:
-              {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -478,7 +395,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.86676681
+      Distance: 1.5278343
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -493,10 +410,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.159797594
+      Pitch: 0.129797608
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.175392687
+      Yaw: 0.520393312
     Saved: ~
 Window Geometry:
   Displays:
@@ -514,5 +431,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1855
-  X: 1985
+  X: 65
   Y: 24
