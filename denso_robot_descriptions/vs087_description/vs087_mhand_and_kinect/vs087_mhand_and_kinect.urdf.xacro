@@ -1,11 +1,17 @@
 <?xml version="1.0"?>
 <robot name="vs087" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- File Include -->
-  <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.urdf.xacro"/>
-  <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.gazebo.xacro"/>
+    <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.urdf.xacro"/>
+    <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.urdf.xacro"/>
 
   <xacro:include filename="$(find denso_robot_descriptions)/vs087_description/vs087/vs087.urdf.xacro"/>
+  <xacro:include filename="$(find mhand_description)/robots/mhand.urdf.xacro"/>
 
+  <joint name="gripper_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="J6"/>
+  <child link="hand_link"/>
+  </joint>
   <!-- add Kinect V2 -->
   <!-- kinect_center -->
   <!-- Link -->

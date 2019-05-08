@@ -1,0 +1,3 @@
+<launch>
+ <rosparam command="load" file ="$(find denso_robot_ros)/denso_robot_moveit_config/vs087_moveit_config/config/vs087/sensors_kinect_pointcloud.yaml" />
+</launch>

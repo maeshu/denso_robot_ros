@@ -2,8 +2,8 @@
 <robot name="vs087" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- <xacro:include filename="$(find denso_robot_descriptions)/vs087_description/vs087/vs087.urdf.xacro"/> -->
   <xacro:include filename="$(find denso_robot_descriptions)/vs087_description/vs087_and_robotiq/vs087_and_robotiq.urdf.xacro"/>
-  <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.urdf.xacro"/>
-  <xacro:include filename="$(find kinect_bringup)/urdf/sensor/kinect.gazebo.xacro"/>
+  <xacro:include filename="$(find denso_robot_description)/kinect_description/kinect.urdf.xacro"/>
+  <xacro:include filename="$(find denso_robot_description)/kinect_description/kinect.gazebo.xacro"/>
 
   <!-- add Kinect V2 -->
   <!-- kinect_center -->
